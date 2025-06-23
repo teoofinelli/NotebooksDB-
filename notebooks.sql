@@ -118,7 +118,6 @@ INSERT INTO detalle_pedido (id_pedido, id_producto, cantidad, total) VALUES
 (4,11,5,2424605),
 (16,2,5,2224085),
 (12,10,4,2560900),
-<<<<<<< HEAD
 (20,12,4,1006128);
 
 DELIMITER //
@@ -226,10 +225,17 @@ END //
 DELIMITER ;
 CALL ConsultasAvanzadas('where', '', 100000);
 CALL ConsultasAvanzadas('like', 'HP', 0);
+CALL ConsultasAvanzadas('order_by', '', 0);
+CALL ConsultasAvanzadas('limit', '', 3);
+CALL ConsultasAvanzadas('in', '', 0);
+CALL ConsultasAvanzadas('distinct', '', 0);
 CALL ConsultasAvanzadas('group_by', '', 0);
+CALL ConsultasAvanzadas('having', '', 5);
+CALL ConsultasAvanzadas('inner_join', '', 0);
+CALL ConsultasAvanzadas('left_join', '', 0);
+CALL ConsultasAvanzadas('subquery', '', 0);
 CALL ConsultasAvanzadas('cte_window', '', 3);
 CALL ConsultasAvanzadas('case_expr', '', 0);
+CALL ConsultasAvanzadas('string_func', '', 0);
+CALL ConsultasAvanzadas('date_func', '', 0);
 CALL ConsultasAvanzadas('regex', 'Lenovo|HP', 0);
-=======
-(20,12,4,1006128);
->>>>>>> 4702b4801cc66b51338ecc7b665fbad1f73ae262
