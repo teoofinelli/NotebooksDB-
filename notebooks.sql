@@ -1,4 +1,7 @@
+-- CREAMOS BASE DE DATOS
+CREATE DATABASE IF NOT EXISTS notebooks;
 USE notebooks;
+-- CREAMOS TABLAS
 CREATE TABLE clientes (
     id_cliente INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -34,6 +37,7 @@ CREATE TABLE detalle_pedido (
     FOREIGN KEY (id_pedido) REFERENCES pedidos(id_pedido),
     FOREIGN KEY (id_producto) REFERENCES productos(id_producto)
 );
+-- INSERTAMOS DATOS
 INSERT INTO clientes (nombre, apellido, email, direccion, telefono) VALUES
 ('Lucas','García','lucas.garcía@mail.com','Pasaje Los Andes 977, Buenos Aires','+5495740690485'),
 ('Mateo','Martínez','mateo.martínez@correo.com','Calle Falsa 827, Mar del Plata','+5493176189436'),
@@ -119,6 +123,8 @@ INSERT INTO detalle_pedido (id_pedido, id_producto, cantidad, total) VALUES
 (16,2,5,2224085),
 (12,10,4,2560900),
 (20,12,4,1006128);
+
+-- GENERAMOS PROCEDIMIENTO ALMACENADO
 
 DELIMITER //
 
